@@ -2,7 +2,7 @@ package sergey;
 
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+
 
 public class Main
 {
@@ -10,7 +10,7 @@ public class Main
     {
         FullName fullName = new FullName("Sergey", "Tomachenko");
 
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Gson gson = new Gson();
 
         System.out.println(gson.toJson(fullName));
     }
