@@ -6,7 +6,7 @@
 
   <groupId>goit</groupId>
   <artifactId>javadev</artifactId>
-  <version>1</version>
+  <version>1.0.0</version>
 
   <name>javadev</name>
   <!-- FIXME change it to the project's website -->
@@ -16,19 +16,23 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>20</maven.compiler.source>
     <maven.compiler.target>20</maven.compiler.target>
+    <dependencie.junit.version>4.13.2</dependencie.junit.version>
+    <dependencie.gson.version>[2.0, 2.10.1]</dependencie.gson.version>
+
+
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>${dependencie.junit.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
-      <version>2.10.1</version>
+      <version>${dependencie.gson.version}</version>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -43,30 +47,10 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.0.0</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-            <configuration>
-              <transformers>
-                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>sergey.Main</mainClass>
-                </transformer>
-              </transformers>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>19</source>
-          <target>19</target>
+          <source>20</source>
+          <target>20</target>
         </configuration>
       </plugin>
     </plugins>
